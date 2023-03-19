@@ -8,7 +8,7 @@ Labs for the angular workshop at the Angular Days 2023 Munich from [Christian Li
 
 ### 1. Bindings
 
-Start: https://stackblitz.com/fork/angular
+Start: https://stackblitz.com/edit/github-uelwhb
 
 <details><summary>Show Labs</summary>
 	
