@@ -63,7 +63,7 @@ Again, the brackets are not a typo. It will work out just fine.
 
 <details><summary>Show Solution</summary>
 
-[https://stackblitz.com/edit/angular-5zuu2g](https://stackblitz.com/edit/github-uelwhb-uhxbn5?file=README.md)
+https://stackblitz.com/edit/github-uelwhb-uhxbn5
 
 ```js
 export class AppComponent  {
@@ -102,7 +102,7 @@ export class AppComponent  {
 
 ### 2. Bindings (Event with $event)
 
-Start: [https://stackblitz.com/edit/angular-5zuu2g](https://stackblitz.com/edit/github-uelwhb-uhxbn5?file=README.md)
+Start: https://stackblitz.com/edit/github-uelwhb-uhxbn5
 
 <details><summary>Show Labs</summary>
 	
@@ -120,7 +120,7 @@ MouseEvent documentation: https://developer.mozilla.org/de/docs/Web/API/MouseEve
 <details><summary>Show Solution</summary>
 
 	
-[https://stackblitz.com/edit/angular-zyc9xx](https://stackblitz.com/edit/github-uelwhb-ery5wz)
+https://stackblitz.com/edit/github-uelwhb-ery5wz
 
 ```js
 export class AppComponent  {
@@ -145,7 +145,7 @@ export class AppComponent  {
 
 ### 3. Pipes
 
-Start: [https://stackblitz.com/edit/angular-zyc9xx](https://stackblitz.com/edit/github-uelwhb-ery5wz)
+Start: https://stackblitz.com/edit/github-uelwhb-ery5wz
 
 <details><summary>Show Labs</summary>
 	
@@ -185,7 +185,7 @@ Implement the yell pipe as follows:
 
 <details><summary>Show Solution</summary>
 
-[https://stackblitz.com/edit/angular-82f7cm](https://stackblitz.com/edit/github-uelwhb-yr4u2r)
+https://stackblitz.com/edit/github-uelwhb-yr4u2r
 
 ```js
 export class AppComponent  {
@@ -223,7 +223,7 @@ export class YellPipe implements PipeTransform {
 
 ### 4. Components
 
-Start: [https://stackblitz.com/edit/angular-82f7cm](https://stackblitz.com/edit/github-uelwhb-yr4u2r)
+Start: https://stackblitz.com/edit/github-uelwhb-yr4u2r
 
 <details><summary>Show Labs</summary>
 	
@@ -245,7 +245,7 @@ If you like, you can duplicate this HTML element to see the idea of componentiza
 
 <details><summary>Show Solution</summary>
 
-[https://stackblitz.com/edit/angular-jz9ivj](https://stackblitz.com/edit/github-uelwhb-97pzlr)
+https://stackblitz.com/edit/github-uelwhb-97pzlr
 
 todo.component.ts
 
@@ -272,7 +272,7 @@ app.component.html
 
 ### 5. Input/Output
 
-Start: [https://stackblitz.com/edit/angular-jz9ivj](https://stackblitz.com/edit/github-uelwhb-97pzlr)
+Start: https://stackblitz.com/edit/github-uelwhb-97pzlr
 
 <details><summary>Show Labs</summary>
 	
@@ -293,7 +293,7 @@ Start: [https://stackblitz.com/edit/angular-jz9ivj](https://stackblitz.com/edit/
 
 <details><summary>Show Solution</summary>
 
-[https://stackblitz.com/edit/angular-3bhmzs](https://stackblitz.com/edit/github-uelwhb-qynuhh)
+https://stackblitz.com/edit/github-uelwhb-qynuhh
 
 todo.component.ts
 
@@ -361,7 +361,7 @@ export class AppComponent  {
 
 ### 6. Directives
 
-Start: [https://stackblitz.com/edit/angular-3bhmzs](https://stackblitz.com/edit/github-uelwhb-qynuhh)
+Start: https://stackblitz.com/edit/github-uelwhb-qynuhh
 
 <details><summary>Show Labs</summary>
 	
@@ -377,7 +377,7 @@ Create another directive (e.g., named `click`) that adds a click handler to the 
 
 <details><summary>Show Solution</summary>
 
-[https://stackblitz.com/edit/angular-ar3wnk](https://stackblitz.com/edit/github-uelwhb-kkukae)
+https://stackblitz.com/edit/github-uelwhb-kkukae
 
 todo.component.ts
 
@@ -459,7 +459,7 @@ export class ClickDirective {
 
 ### 7. Dependency Injection/Services
 
-Start: [https://stackblitz.com/edit/angular-ar3wnk](https://stackblitz.com/edit/github-uelwhb-kkukae)
+Start: https://stackblitz.com/edit/github-uelwhb-kkukae
 
 <details><summary>Show Labs</summary>
 	
@@ -496,7 +496,7 @@ Add a very basic, synchronous implementation for getAll. Inject your TodoService
 
 <details><summary>Show Solution</summary>
 
-[https://stackblitz.com/edit/angular-vjgnec](https://stackblitz.com/edit/github-uelwhb-dtv755)
+https://stackblitz.com/edit/github-uelwhb-dtv755
 
 app.component.ts
 
@@ -534,8 +534,6 @@ app.module.ts
 import { NgModule, InjectionToken, Inject } from '@angular/core';
 // other imports
 
-export const APP_NAME = new InjectionToken<string>('app-name');
-
 @NgModule({
   imports:      [ BrowserModule, FormsModule ],
   declarations: [ AppComponent, 
@@ -544,14 +542,10 @@ export const APP_NAME = new InjectionToken<string>('app-name');
                   TodoComponent, 
                   ColorDirective, 
                   ClickDirective ],
-  providers: [{ provide: APP_NAME, useValue: 'My cool app' }, TodoService],
+  providers: 	[TodoService],
   bootstrap:    [ AppComponent ]
 })
-export class AppModule {
-  constructor(@Inject(APP_NAME) appName: string){
-    console.log(appName);
-  }
- }
+export class AppModule {}
 
 ```
 
@@ -594,7 +588,7 @@ export class TodoService {
 
 ### 8. Structural Directives
 
-Start: [https://stackblitz.com/edit/angular-vjgnec](https://stackblitz.com/edit/github-uelwhb-dtv755)
+Start: https://stackblitz.com/edit/github-uelwhb-dtv755
 
 <details><summary>Show Labs</summary>
 	
@@ -637,7 +631,7 @@ Next, iterate over your TodoComponent (app-todo) instead and pass the todo via t
 
 <details><summary>Show Solution</summary>
 
-[https://stackblitz.com/edit/angular-mznjjg](https://stackblitz.com/edit/github-uelwhb-kud3vk)
+https://stackblitz.com/edit/github-uelwhb-kud3vk
 
 app.component.ts
 
@@ -757,7 +751,7 @@ todo.component.html
 
 ### 9. Observables
 
-Start: [https://stackblitz.com/edit/angular-mznjjg](https://stackblitz.com/edit/github-uelwhb-kud3vk)
+Start: https://stackblitz.com/edit/github-uelwhb-kud3vk
 
 <details><summary>Show Labs</summary>
 	
@@ -788,7 +782,7 @@ Add a constructor to TodoService and request an instance of HttpClient and use H
 
 <details><summary>Show Solution</summary>
 
-[https://stackblitz.com/edit/angular-jfyble](https://stackblitz.com/edit/github-uelwhb-wxkhew)
+https://stackblitz.com/edit/github-uelwhb-wxkhew
 
 app.module.ts
 
@@ -805,14 +799,10 @@ import { HttpClientModule } from '@angular/common/http';
         ColorDirective,
         ClickDirective,
     ],
-    providers: [{ provide: APP_NAME, useValue: 'My cool app' }, TodoService],
+    providers: [TodoService],
     bootstrap: [AppComponent],
 })
-export class AppModule {
-    constructor(@Inject(APP_NAME) appName: string) {
-        console.log(appName);
-    }
-}
+export class AppModule {}
 ```
 
 todo.service.ts
@@ -887,7 +877,7 @@ export class AppComponent  {
 
 ### 10. Async Pipe
 
-Start: [https://stackblitz.com/edit/angular-jfyble](https://stackblitz.com/edit/github-uelwhb-wxkhew)
+Start: https://stackblitz.com/edit/github-uelwhb-wxkhew
 
 <details><summary>Show Labs</summary>
 	
@@ -930,7 +920,7 @@ this.todos$ = todoService.getAll();
 
 <details><summary>Show Solution</summary>
 
-[https://stackblitz.com/edit/angular-w7g8tc](https://stackblitz.com/edit/github-uelwhb-hp1ax1)
+https://stackblitz.com/edit/github-uelwhb-hp1ax1
 
 app.component.ts
 
@@ -990,7 +980,7 @@ app.component.html
 
 ### 11. Routing
 
-Start: [https://stackblitz.com/edit/angular-w7g8tc](https://stackblitz.com/edit/github-uelwhb-hp1ax1)
+Start: https://stackblitz.com/edit/github-uelwhb-hp1ax1
 
 <details><summary>Show Labs</summary>
 	
@@ -1050,7 +1040,7 @@ Add a CSS style for a.my-active
 
 <details><summary>Show Solution</summary>
 
-[https://stackblitz.com/edit/angular-dlrdvt](https://stackblitz.com/edit/github-uelwhb-kdonbj)
+https://stackblitz.com/edit/github-uelwhb-kdonbj
 
 app.module.ts
 
@@ -1064,8 +1054,6 @@ const appRoutes: Routes = [
     { path: 'todos/:id', component: TodoEditComponent },
     { path: '**', component: NotFoundComponent },
 ];
-
-export const APP_NAME = new InjectionToken() < string > 'app-name';
 
 @NgModule({
     imports: [
@@ -1086,14 +1074,10 @@ export const APP_NAME = new InjectionToken() < string > 'app-name';
         ColorDirective,
         ClickDirective,
     ],
-    providers: [{ provide: APP_NAME, useValue: 'My cool app' }, TodoService],
+    providers: [TodoService],
     bootstrap: [AppComponent],
 })
-export class AppModule {
-    constructor(@Inject(APP_NAME) appName: string) {
-        console.log(appName);
-    }
-}
+export class AppModule {}
 ```
 
 app.component.ts
@@ -1188,7 +1172,7 @@ todo-edit.component.html
 
 ### 12. Template Forms
 
-Start: [https://stackblitz.com/edit/angular-dlrdvt](https://stackblitz.com/edit/github-uelwhb-kdonbj)
+Start: https://stackblitz.com/edit/github-uelwhb-kdonbj
 
 <details><summary>Show Labs</summary>
 	
@@ -1215,7 +1199,7 @@ Start: [https://stackblitz.com/edit/angular-dlrdvt](https://stackblitz.com/edit/
 
 <details><summary>Show Solution</summary>
 
-[https://stackblitz.com/edit/angular-4goufd](https://stackblitz.com/edit/github-uelwhb-wqvfrk)
+https://stackblitz.com/edit/github-uelwhb-wqvfrk
 
 todo-edit.component.html
 
