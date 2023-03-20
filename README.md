@@ -643,7 +643,7 @@ app.component.ts
 })
 export class AppComponent  {
 
-  private show = true;
+  show = true;
   todos = [];
 
   constructor(private readonly elementRef: ElementRef,
